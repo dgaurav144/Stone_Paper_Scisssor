@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 97vh;
+    width: 100%;
+    background-color: teal;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.p1,
+.p2 {
+    height: 100%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.vs {
+    height: 100%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#stone {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./stone1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#stone2 {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./stone2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#paper {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./paper1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#paper2 {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./paper2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#scissor {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./scissor1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#scissor2 {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./scissor2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vs2 {
+    height: 23%;
+    width: 62%;
+    background-color: #fff;
+    border-radius: 50%;
+    background-image: url("./Vs\ png\ transparent\ image\ free_1657719708_1411478915.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cng1 {
+    transform: rotateY(7200deg);
+    transition: all 4s ease;
+}
+
+.cng2 {
+    transform: rotateY(7200deg);
+    transition: all 4s ease;
+}
+button{
+    padding: 5px 25px;
+    font-size: 16px;
+    border-radius: 15px 0px 15px 0px ;
+    background-color: black;
+    color: #fff;
+    display: none;
+}
+button:hover{
+    color: black;
+    background-color: #fff;
+    transition: all 1s ease;
+}
+#jita {
+    font-size: 25px;
+  
+   
+    text-align: center;
+}
+.note{
+    background-color: teal;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+
+}
+@media (max-width:1200px){
+    #stone , #paper, #scissor{
+        height: 100px;
+        width: 100px;
+    }
+    .vs2{
+        height: 70px;
+        width: 70px;
+
+    }
+    #stone2 , #paper2, #scissor2{
+       height: 100px;
+       width: 100px;
+    }
+    btn{
+        height: 18px;
+        width: 70px;
+
+    }
+    h2{
+        font-size: 15px;
+    }
+    .vs{
+        gap:50px
+    }
+    #jita{
+        font-size: 15px;
+    }
+
+}

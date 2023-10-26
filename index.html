@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+   <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+   
+    <div class="main">
+
+        <div class="p1">
+            <h2>Player</h2>
+            <div id="stone"></div>
+            <div id="paper"></div>
+            <div id="scissor"></div>
+        </div>
+        <div class="vs">
+            <div class="vs2"></div>
+
+            <button id="start">Start</button>
+            <p id="jita"></p>
+            <button id="btn2">Play Again</button>
+        </div>
+        <div class="p2">
+            <h2>Computer</h2>
+            <div id="stone2"></div>
+            <div id="paper2"></div>
+            <div id="scissor2"></div>
+        </div>
+
+
+    </div>
+    <p class="note"><b>Note:-</b>Choose a Photo Of Stone Paper and scissor from Player section and press the Start button</p>
+    <script>
+        
+        let stone = document.getElementById("stone")
+        let stone2 = document.getElementById("stone2")
+        let paper = document.getElementById("paper")
+        let paper2 = document.getElementById("paper2")
+        let scissor = document.getElementById("scissor")
+        let scissor2 = document.getElementById("scissor2")
+        let jita = document.getElementById("jita")
+        let btn2 = document.getElementById("btn2")
+        let stoneWin = 1
+        let paperWin = 2
+        let scissorWin = 3
+        
+        stone.addEventListener("click", () => {
+            start.style.display = "block"
+
+            stone.style.transform = "scale(1.3)"
+
+            stone.style.transition = "all 2s"
+            paper.style.display = "none"
+            scissor.style.display = "none"
+
+            jita.style.display = "none"
+            let b = setTimeout(() => {
+                if (number === 3 && stoneWin === 1) {
+                    jita.innerHTML = "You win"
+                }
+                else if (number == 1 && stoneWin === 1) {
+                    jita.innerHTML = "Match Tie"
+
+                }
+                else {
+                    jita.innerHTML = "You lost"
+                }
+               
+               
+
+
+
+            }, 3000)
+           
+
+
+
+        })
+        paper.addEventListener("click", () => {
+            start.style.display = "block"
+            jita.style.display = "none"
+
+            paper.style.transform = "scale(1.3)"
+
+            paper.style.transition = "all 2s"
+            stone.style.display = "none"
+            scissor.style.display = "none"
+
+
+
+            let c = setTimeout(() => {
+                if (number === 1 && paperWin === 2) {
+                    jita.innerHTML = "You win"
+                }
+                else if (number == 2 && paperWin === 2) {
+                    jita.innerHTML = "Match Tie"
+
+                }
+                else {
+                    jita.innerHTML = "You lost"
+                }
+
+            }, 3000)
+
+
+
+        })
+
+        scissor.addEventListener("click", () => {
+            start.style.display = "block"
+            jita.style.display = "none"
+
+            scissor.style.transform = "scale(1.3)"
+
+            scissor.style.transition = "all 2s"
+            stone.style.display = "none"
+            paper.style.display = "none"
+
+
+
+            let d = setTimeout(() => {
+                if (number === 2 && scissorWin === 3) {
+                    jita.innerHTML = "You win"
+                }
+                else if (number == 3 && scissorWin === 3) {
+                    jita.innerHTML = "Match Tie"
+
+                }
+                else {
+                    jita.innerHTML = "You lost"
+                }
+
+            }, 3000)
+
+
+
+        })
+        let start = document.getElementById("start")
+        let number = Math.floor(Math.random() * 3) + 1
+        console.log(number)
+
+        start.addEventListener("click", () => {
+            
+            stone2.classList.add("cng1")
+            paper2.classList.add("cng1")
+            scissor2.classList.add("cng1")
+            start.style.display = "none"
+
+            let a = setTimeout(() => {
+
+
+                if (number === 1) {
+                    paper2.style.display = "none"
+                    scissor2.style.display = "none"
+                }
+                else if (number === 2) {
+                    stone2.style.display = "none"
+                    scissor2.style.display = "none"
+
+                }
+                else if (number === 3) {
+                    stone2.style.display = "none"
+                    paper2.style.display = "none"
+
+                }
+
+
+
+                jita.style.display = "block"
+
+                btn2.style.display = "block"
+
+            }, 3000)
+
+
+        })
+        btn2.addEventListener("click", ()=>{
+            location.reload()
+        })
+
+
+
+    </script>
+</body>
+
+</html>
